@@ -26,7 +26,7 @@ public class GlobalExceptionHandler {
 
     @ExceptionHandler(CustomerAlreadyExistsException.class)
     public ResponseEntity<ErrorResponseDto> handleCustomerAlreadyExistsException(
-            CustomerAlreadyExistsException exception, WebRequest webRequest){
+            CustomerAlreadyExistsException exception, WebRequest webRequest) {
         ErrorResponseDto errorResponseDTO = new ErrorResponseDto(
                 webRequest.getDescription(false),
                 HttpStatus.BAD_REQUEST,
