@@ -1,6 +1,6 @@
 services:
   accounts:
-    image: "jldemiguel/accounts:s4"
+    image: "jldemiguel/accounts:s6"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -11,7 +11,7 @@ services:
     networks:
       - jldemiguel
   loans:
-    image: "jldemiguel/loans:s4"
+    image: "jldemiguel/loans:s6"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -22,7 +22,7 @@ services:
     networks:
       - jldemiguel
   cards:
-    image: "jldemiguel/cards:s4"
+    image: "jldemiguel/cards:s6"
     container_name: cards-ms
     ports:
       - "9000:9000"
