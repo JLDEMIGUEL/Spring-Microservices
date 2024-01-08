@@ -1,3 +1,4 @@
+eazybytes-config
 
 target/
 !.mvn/wrapper/maven-wrapper.jar
