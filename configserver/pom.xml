@@ -56,7 +56,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <to>
-                        <image>jldemiguel/${project.artifactId}:s7</image>
+                        <image>jldemiguel/${project.artifactId}:s6</image>
                     </to>
                 </configuration>
             </plugin>
