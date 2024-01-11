@@ -45,8 +45,6 @@ endpoints:
   shutdown:
     enable: true
 
-
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -61,3 +59,9 @@ info:
     name: "cards"
     description: "Eazy Bank Cards Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        cards: DEBUG

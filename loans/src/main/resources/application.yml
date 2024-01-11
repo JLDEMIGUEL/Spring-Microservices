@@ -45,8 +45,6 @@ endpoints:
   shutdown:
     enable: true
 
-
-
 eureka:
   instance:
     prefer-ip-address: true
@@ -61,3 +59,9 @@ info:
     name: "loans"
     description: "Eazy Bank Loans Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        loans: DEBUG
