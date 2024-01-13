@@ -105,7 +105,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <to>
-                        <image>jldemiguel/${project.artifactId}:s9</image>
+                        <image>jldemiguel/${project.artifactId}:s10</image>
                     </to>
                 </configuration>
             </plugin>

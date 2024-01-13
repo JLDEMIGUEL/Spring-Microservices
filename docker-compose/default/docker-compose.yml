@@ -1,6 +1,6 @@
 services:
   configserver:
-    image: "jldemiguel/configserver:s9"
+    image: "jldemiguel/configserver:s10"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -15,7 +15,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "jldemiguel/eurekaserver:s9"
+    image: "jldemiguel/eurekaserver:s10"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -36,7 +36,7 @@ services:
 
 
   accounts:
-    image: "jldemiguel/accounts:s9"
+    image: "jldemiguel/accounts:s10"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -53,7 +53,7 @@ services:
       service: microservice-eureka-config
 
   loans:
-    image: "jldemiguel/loans:s9"
+    image: "jldemiguel/loans:s10"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -70,7 +70,7 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "jldemiguel/cards:s9"
+    image: "jldemiguel/cards:s10"
     container_name: cards-ms
     ports:
       - "9000:9000"
@@ -87,7 +87,7 @@ services:
       service: microservice-eureka-config
 
   gatewayserver:
-    image: "jldemiguel/gatewayserver:s9"
+    image: "jldemiguel/gatewayserver:s10"
     container_name: gatewayserver-ms
     ports:
       - "8072:8072"
