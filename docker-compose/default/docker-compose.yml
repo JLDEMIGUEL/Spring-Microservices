@@ -1,6 +1,18 @@
 services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: [ "CMD-SHELL", "redis-cli ping | grep PONG" ]
+      timeout: 10s
+      retries: 10
+    extends:
+      file: common-config.yml
+      service: network-deploy-service
+
   configserver:
-    image: "jldemiguel/configserver:s10"
+    image: "jldemiguel/configserver:s11"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -15,7 +27,7 @@ services:
       service: microservice-base-config
 
   eurekaserver:
-    image: "jldemiguel/eurekaserver:s10"
+    image: "jldemiguel/eurekaserver:s11"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -36,7 +48,7 @@ services:
 
 
   accounts:
-    image: "jldemiguel/accounts:s10"
+    image: "jldemiguel/accounts:s11"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -53,7 +65,7 @@ services:
       service: microservice-eureka-config
 
   loans:
-    image: "jldemiguel/loans:s10"
+    image: "jldemiguel/loans:s11"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -70,7 +82,7 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "jldemiguel/cards:s10"
+    image: "jldemiguel/cards:s11"
     container_name: cards-ms
     ports:
       - "9000:9000"
@@ -87,7 +99,7 @@ services:
       service: microservice-eureka-config
 
   gatewayserver:
-    image: "jldemiguel/gatewayserver:s10"
+    image: "jldemiguel/gatewayserver:s11"
     container_name: gatewayserver-ms
     ports:
       - "8072:8072"
@@ -98,8 +110,14 @@ services:
         condition: service_healthy
       cards:
         condition: service_healthy
+      redis:
+        condition: service_healthy
     environment:
       SPRING_APPLICATION_NAME: "gatewayserver"
+      SPRING_DATA_REDIS_CONNECT-TIMEOUT: 2s
+      SPRING_DATA_REDIS_HOST: redis
+      SPRING_DATA_REDIS_PORT: 6379
+      SPRING_DATA_REDIS_TIMEOUT: 1s
     extends:
       file: common-config.yml
       service: microservice-eureka-config
