@@ -98,7 +98,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <image>
-                        <name>jldemiguel/${project.artifactId}:s11</name>
+                        <name>jldemiguel/${project.artifactId}:s13</name>
                     </image>
                     <excludes>
                         <exclude>
@@ -114,7 +114,7 @@
                 <version>3.4.0</version>
                 <configuration>
                     <to>
-                        <image>jldemiguel/${project.artifactId}:s11</image>
+                        <image>jldemiguel/${project.artifactId}:s13</image>
                     </to>
                 </configuration>
             </plugin>
