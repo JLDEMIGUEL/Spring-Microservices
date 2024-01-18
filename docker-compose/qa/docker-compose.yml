@@ -16,7 +16,7 @@ services:
       service: network-deploy-service
 
   configserver:
-    image: "jldemiguel/configserver:s13"
+    image: "jldemiguel/configserver:s14"
     container_name: configserver-ms
     ports:
       - "8071:8071"
@@ -33,7 +33,7 @@ services:
       OTEL_SERVICE_NAME: "configserver"
 
   eurekaserver:
-    image: "jldemiguel/eurekaserver:s13"
+    image: "jldemiguel/eurekaserver:s14"
     container_name: eurekaserver-ms
     ports:
       - "8070:8070"
@@ -55,7 +55,7 @@ services:
 
 
   accounts:
-    image: "jldemiguel/accounts:s13"
+    image: "jldemiguel/accounts:s14"
     container_name: accounts-ms
     ports:
       - "8080:8080"
@@ -77,7 +77,7 @@ services:
       service: microservice-eureka-config
 
   loans:
-    image: "jldemiguel/loans:s13"
+    image: "jldemiguel/loans:s14"
     container_name: loans-ms
     ports:
       - "8090:8090"
@@ -95,7 +95,7 @@ services:
       service: microservice-eureka-config
 
   cards:
-    image: "jldemiguel/cards:s13"
+    image: "jldemiguel/cards:s14"
     container_name: cards-ms
     ports:
       - "9000:9000"
@@ -113,7 +113,7 @@ services:
       service: microservice-eureka-config
 
   message:
-    image: "eazybytes/message:s13"
+    image: "eazybytes/message:s14"
     container_name: message-ms
     depends_on:
       rabbit:
@@ -125,7 +125,7 @@ services:
       service: network-deploy-service
 
   gatewayserver:
-    image: "jldemiguel/gatewayserver:s13"
+    image: "jldemiguel/gatewayserver:s14"
     container_name: gatewayserver-ms
     ports:
       - "8072:8072"
