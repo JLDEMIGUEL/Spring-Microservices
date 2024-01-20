@@ -25,6 +25,7 @@
 
 ## 📍 Overview
 <p>This project is an implementation of a microservices architecture using Spring Boot and various cloud-native technologies. It showcases a range of features that make it suitable for production environments, including resilience, scalability, maintainability, documentation, Dockerization, cloud-native principles, config management, service discovery, resiliency, observability, authentication, authorization, and event-driven architecture.</p>
+
 ---
 
 ## 📦 Features
